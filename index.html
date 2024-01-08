@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Meu Portfólio de Programação</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#sobre-mim">Sobre Mim</a></li>
+            <li><a href="#certificados">Certificados</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contato">Me Contrate</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Seções existentes: Sobre Mim e Certificados -->
+    <div class="container">
+        <section id="sobre-mim" class="data-container">
+            <div class="my-data">
+                <img src="./assets/perfil.jpg" alt="Minha Foto" class="profile-pic" style="width: 25%;">
+                <h1>Pedro Humberto Gonçalves Cardoso</h1>
+                <p>Desenvolvedor de Software | .Net Dev | Front-End | Back-End</p>
+            </div>
+            <div class="my-info">
+                <h3>Contatos:</h3>
+                <div class="socials">
+                    <a class="social-item" href="https://www.linkedin.com/in/pedro-cardoso-864542200/"
+                        target="_blank"><i class="ti-linkedin"></i></a>
+                    <a class="social-item"><i class="ti-google"></i></a>
+                    <a class="social-item" href=""><i class="ti-github"></i></a>
+                    <a class="social-item"><i class="ti-twitter"></i></a>
+                </div>
+
+                <a href="/assets/img/balta-io.png" download="my_file.png"><button class="custom-button">Download CV</button></a>
+            </div>
+        </section>
+
+        <section id="certificados">
+            <h1>Certificados</h1>
+            <div class="carousel">
+                <div class="carousel-track-container">
+                    <ul class="carousel-track">
+                        <!-- Adicione suas divs 'card' aqui como itens 'li' da lista -->
+                        <li class="carousel-slide">
+                            <div class="card">
+                                <a href="https://cursos.alura.com.br/certificate/b87e2e1b-07f2-4ff2-80d2-9287d5ca86d3?lang=pt_BR"
+                                    target="_blank">
+                                    <img src="./assets/img/logo_alura.jpg" alt="curso">
+                                    <h2>EF Core: Relacionando Entidades</h2>
+                                    <p>Este curso fornece um mergulho profundo nos estudos de relacionamentos entre
+                                        entidades no
+                                        contexto do .NET e Entity Framework Core,
+                                        abrangendo desde relações um-para-um (1:1) até um-para-muitos (1:n) e
+                                        muitos-para-muitos
+                                        (n:n). Foram relizadas atividades práticas e
+                                        teóricas para aplicação de com conhecimentos sólidos e habilidades práticas na
+                                        modelagem e
+                                        implementação de relacionamentos de banco de dados.</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="card">
+                                <a href="https://balta.io/certificados/79b3cc97-ab1e-41e8-9a25-3718ca290dd8"
+                                    target="_blank">
+                                    <img src="./assets/img/balta-logo.jpg" alt="curso">
+                                    <h2>Segurança em APIs ASP.NET</h2>
+                                    <p>Este curso oferece um estudo aprofundado sobre a implementação de segurança em
+                                        APIs ASP.NET
+                                        por meio do uso do JWT (JSON Web Tokens)
+                                        e da autenticação Bearer. As aulas abordam tanto aspectos teóricos quanto
+                                        práticos,
+                                        garantindo uma compreensão completa de como essas
+                                        tecnologias funcionam e como podem ser efetivamente aplicadas para proteger suas
+                                        aplicações
+                                        web.</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="card">
+                                <a href="https://balta.io/certificados/64db2269-365e-4d14-8b64-4f61142357b0">
+                                    <img src="./assets/img/balta-logo.jpg" alt="curso">
+                                    <h2>Fundamentos do SQL Server</h2>
+                                    <p>Este curso aborda de forma prática e interativa os conceitos essenciais do SQL,
+                                        utilizando o
+                                        SQL Server como ferramenta de aprendizado.
+                                        O instrutor fornece um banco de dados dedicado para que os alunos possam aplicar
+                                        e aprimorar
+                                        suas habilidades em SQL, realizando exercícios práticos.
+                                        As queries e técnicas são ensinadas passo a passo durante as aulas, facilitando
+                                        o
+                                        entendimento e a aplicação dos conceitos aprendidos.
+                                    </p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="card">
+                                <a href="https://cursos.alura.com.br/user/pedrohumbertogc/course/react-modernizando-escrever-typescript/certificate"
+                                    target="_blank">
+                                    <img src="./assets/img/logo_alura.jpg" alt="curso">
+                                    <h2>React + TypeScript</h2>
+                                    <p>Nesta aula, exploramos os conceitos fundamentais do React, incluindo componentização, props e
+                                        state, com a integração poderosa
+                                        do TypeScript. O curso se aprofunda em um projeto prático, onde os conceitos de hooks, como
+                                        useState e useEffect,
+                                        são detalhadamente abordados. Além disso, enfatizamos a aplicação de boas práticas no
+                                        desenvolvimento, garantindo
+                                        uma base sólida para a construção de aplicações React eficientes e escaláveis.
+                                    </p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="card">e</div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="card">A</div>
+                        </li>
+
+                        <!-- Repita para outros certificados -->
+                    </ul>
+                </div>
+                <!-- Botões de navegação do carrossel (opcional) -->
+                <button class="carousel-button prev"><</button>
+                <button class="carousel-button next">></button>
+            </div>
+        </section>
+
+        
+
+        <section id="projetos">
+            <h1>Meus Projetos</h1>
+            <div class="card-project-container">
+                <!-- Cartões de projeto. Repetir para 4x4 conforme necessário -->
+                <div class="card-project">
+                    <img src="projeto1.jpg" alt="Projeto 1">
+                    <div class="card-text">
+                        <h3>Projeto 1</h3>
+                        <p>Descrição do Projeto 1...</p>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <img src="projeto1.jpg" alt="Projeto 1">
+                    <div class="card-text">
+                        <h3>Projeto 1</h3>
+                        <p>Descrição do Projeto 1...</p>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <img src="projeto1.jpg" alt="Projeto 1">
+                    <div class="card-text">
+                        <h3>Projeto 1</h3>
+                        <p>Descrição do Projeto 1...</p>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <img src="projeto1.jpg" alt="Projeto 1">
+                    <div class="card-text">
+                        <h3>Projeto 1</h3>
+                        <p>Descrição do Projeto 1...</p>
+                    </div>
+                </div>
+                <!-- Adicionar mais cartões aqui -->
+            </div>
+        </section>
+
+        <section id="skills">
+            <h1>Skills</h1>
+
+            <p id="descricao-skills">
+                Atualmente, estou cursando Análise e Desenvolvimento de Sistemas, com previsão de conclusão no primeiro
+                semestre de 2024.
+                <br>
+                Profissional com experiência no mercado autônomo, especializado em rotinas de escritório de
+                contabilidade, amplo conhecimento em sistemas contábeis, Domínio Sistemas.
+                Profissional com vasta experiência no mercado autônomo, especializei-me em rotinas de escritório de
+                contabilidade e possuo um conhecimento
+                abrangente em sistemas contábeis, com destaque para o Domínio Sistemas. Atualmente, estou aprofundando
+                minhas habilidades em programação,
+                com foco especial em C#, .NET e React.
+                <br>
+                Sou conhecido pela minha proatividade, dedicação, concentração e espírito empreendedor,
+                mantendo-me sempre atualizado através de livros, vídeos e cursos.
+                <br>
+                Dedico-me a estudos constantes em áreas como:
+            <ul>
+                <li>C#</li>
+                <li>TypeScript#</li>
+                <li>React</li>
+                <li>TDD (Test-Driven Development)</li>
+                <li>DDD (Domain-Driven Design)</li>
+                <li>Clean Architecture</li>
+                <li>SOLID</li>
+            </ul>
+            </p>
+            <p id="descricao-skills">
+                <b>Demais Linguagens que já programei:</b>
+                JavaScript,
+                Python,
+                Kotlin
+                <br>
+                <b>Frameworks:</b>
+                React
+                .NET Framework
+                <br>
+                <b>Inglês:</b>
+                Avançãdo (Estudando)
+            </p>
+
+            <div class="skill-container">
+                <div class="skill">
+                    <h2>C#</h2>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h2>TypeScript</h2>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 72%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h2>SQL</h2>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 77%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h2>React</h2>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <h2>Inglês</h2>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h1>Me Contrate</h1>
+            <form>
+                <input type="text" name="nome" placeholder="Seu Nome">
+                <input type="email" name="email" placeholder="Seu E-mail">
+                <input type="tel" name="telefone" placeholder="Seu Telefone">
+                <textarea name="descricao" placeholder="Descreva seu projeto..."></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 Pedro Humberto Gonçalves Cardoso. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // JavaScript para alterar a cor do item da navbar ao clicar
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function () {
+                document.querySelectorAll('nav ul li a').forEach(node => {
+                    node.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+        // JavaScript para adicionar sombra na barra de navegação ao rolar
+        window.addEventListener('scroll', function () {
+            var nav = document.querySelector('nav');
+            nav.classList.toggle('scrolled', window.scrollY > 0);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const track = document.querySelector('.carousel-track');
+            const slides = Array.from(track.children);
+            const nextButton = document.querySelector('.carousel-button.next');
+            const prevButton = document.querySelector('.carousel-button.prev');
+            let currentIndex = 0;
+
+            // Calcula a largura total do carrossel
+            const slideWidth = slides[0].getBoundingClientRect().width + 20; // 20 é o espaçamento
+
+            // Atualiza a posição dos slides
+            const setSlidePosition = (slide, index) => {
+                slide.style.left = slideWidth * index + 'px';
+            };
+            slides.forEach(setSlidePosition);
+
+            nextButton.addEventListener('click', function () {
+                // Verifica se o carrossel está no último slide
+                if (currentIndex < slides.length - 1) {
+                    currentIndex++;
+                    track.style.transform = 'translateX(-' + slideWidth * currentIndex + 'px)';
+                }
+            });
+
+            prevButton.addEventListener('click', function () {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    track.style.transform = 'translateX(-' + slideWidth * currentIndex + 'px)';
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
