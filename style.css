@@ -259,7 +259,19 @@ ul{
     margin: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 330px;
-    height: 330px;
+    height: 445px;
+}
+.card-project a{
+    text-align: justify;
+    text-decoration: none;
+    color: black;
+    font-size: 0.8em;
+}
+.card-project h3{
+    text-align: center;
+}
+.card-project img {
+    height: 140px;
 }
 
 .card-project:hover {
