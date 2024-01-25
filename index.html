@@ -42,7 +42,7 @@
 
         <section id="certificados">
             <h1>Certificados</h1>
-            <div class="carousel">
+            <div class="carousel" id="drag-carousel">
                 <div class="carousel-track-container">
                     <ul class="carousel-track">
                         <!-- Adicione suas divs 'card' aqui como itens 'li' da lista -->
@@ -63,21 +63,20 @@
                                         implementação de relacionamentos de banco de dados.</p>
                                 </a>
                             </div>
-                            
-                            <li class="carousel-slide">
-                                <div class="card">
-                                    <img src="./assets/img/balta-logo.jpg" alt="curso">
-                                    <a href="https://balta.io/certificados/ce239517-ed14-4486-b484-a583f8f40cdc" target="_blank">
-                                        <h2>Fundamentos do Event-Driven</h2>
-                                        <p>
-                                            O curso abordou Event-Driven Architecture (Arquitetura Orientada a Eventos), incluindo demonstrações de mapeamento, 
-                                            conceitos-chave como eventos, políticas de execução, integração com sistemas externos, 
-                                            e fundamentos teóricos de mensagens, eventos e comandos. Recomendou-se também explorar 
-                                            CQRS para uma compreensão mais aprofundada. O professor Andre Baltieri apresentou um projeto prático durante o curso.
-                                        </p>
-                                    </a>
-                                </div>
-                            </li>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="card">
+                                <img src="./assets/img/balta-logo.jpg" alt="curso">
+                                <a href="https://balta.io/certificados/ce239517-ed14-4486-b484-a583f8f40cdc" target="_blank">
+                                    <h2>Fundamentos do Event-Driven</h2>
+                                    <p>
+                                        O curso abordou Event-Driven Architecture (Arquitetura Orientada a Eventos), incluindo demonstrações de mapeamento, 
+                                        conceitos-chave como eventos, políticas de execução, integração com sistemas externos, 
+                                        e fundamentos teóricos de mensagens, eventos e comandos. Recomendou-se também explorar 
+                                        CQRS para uma compreensão mais aprofundada. O professor Andre Baltieri apresentou um projeto prático durante o curso.
+                                    </p>
+                                </a>
+                            </div>
                         </li>
                         <li class="carousel-slide">
                             <div class="card">
@@ -132,16 +131,12 @@
                                 </a>
                             </div>
                         </li>
-
-
-
                         <!-- Repita para outros certificados -->
                     </ul>
                 </div>
-                <!-- Botões de navegação do carrossel (opcional) -->
-                <button class="carousel-button prev"><</button>
-                <button class="carousel-button next">></button>
+                <!-- Botões de navegação do carrossel removidos para implementação de arraste -->
             </div>
+            
         </section>
 
         
@@ -312,37 +307,33 @@
             nav.classList.toggle('scrolled', window.scrollY > 0);
         });
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const track = document.querySelector('.carousel-track');
-            const slides = Array.from(track.children);
-            const nextButton = document.querySelector('.carousel-button.next');
-            const prevButton = document.querySelector('.carousel-button.prev');
-            let currentIndex = 0;
+         // Script para implementar o arraste no carrossel
+         const dragCarousel = document.getElementById('drag-carousel');
+                let isDown = false;
+                let startX;
+                let scrollLeft;
 
-            // Calcula a largura total do carrossel
-            const slideWidth = slides[0].getBoundingClientRect().width + 20; // 20 é o espaçamento
-
-            // Atualiza a posição dos slides
-            const setSlidePosition = (slide, index) => {
-                slide.style.left = slideWidth * index + 'px';
-            };
-            slides.forEach(setSlidePosition);
-
-            nextButton.addEventListener('click', function () {
-                // Verifica se o carrossel está no último slide
-                if (currentIndex < slides.length - 1) {
-                    currentIndex++;
-                    track.style.transform = 'translateX(-' + slideWidth * currentIndex + 'px)';
-                }
-            });
-
-            prevButton.addEventListener('click', function () {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    track.style.transform = 'translateX(-' + slideWidth * currentIndex + 'px)';
-                }
-            });
-        });
+                dragCarousel.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    dragCarousel.classList.add('active');
+                    startX = e.pageX - dragCarousel.offsetLeft;
+                    scrollLeft = dragCarousel.scrollLeft;
+                });
+                dragCarousel.addEventListener('mouseleave', () => {
+                    isDown = false;
+                    dragCarousel.classList.remove('active');
+                });
+                dragCarousel.addEventListener('mouseup', () => {
+                    isDown = false;
+                    dragCarousel.classList.remove('active');
+                });
+                dragCarousel.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - dragCarousel.offsetLeft;
+                    const walk = (x - startX); // Adjusted for smoother drag
+                    dragCarousel.scrollLeft = scrollLeft - walk;
+                });
 
     </script>
 </body>
