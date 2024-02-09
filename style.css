@@ -1,10 +1,13 @@
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
     line-height: 1.6;
     background-color: #3333331c;
+    align-items: center;
 }
 
 html {
@@ -19,10 +22,8 @@ header {
 
 
 .profile-pic {
-    width: 100px; /* ou a largura desejada */
-    height: 190px; /* ou a altura desejada, deve ser igual à largura para um círculo perfeito */
+    height: 24vh; /* ou a altura desejada, deve ser igual à largura para um círculo perfeito */
     border-radius: 50%; /* Isso cria o efeito arredondado */
-    object-fit: cover; /* Isso garante que a imagem cubra toda a área, útil para imagens não quadradas */
     border: 2px solid #f0544f; /* Opcional: adiciona uma borda branca */
 }
 
@@ -50,6 +51,11 @@ p {
 }
 
 nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     background-color: white;
     padding: 20px 0;
     text-align: center;
@@ -90,7 +96,7 @@ nav ul li a.active {
 }
 
 .container{
-    margin: 0px 190px;
+    width: 90vw;
     background-color: white;
 }
 
@@ -139,6 +145,20 @@ section {
     .my-info{
         border-bottom: 10px double #f0544f; /* Adiciona a borda na parte inferior */
 
+    }
+}
+
+@media (max-width: 1000px){
+    .container{
+        width: 92vw;
+    }
+    nav{
+        display: none;
+    }
+    .profile-pic {
+        height: 16vh; /* ou a altura desejada, deve ser igual à largura para um círculo perfeito */
+        border-radius: 50%; /* Isso cria o efeito arredondado */
+        border: 2px solid #f0544f; /* Opcional: adiciona uma borda branca */
     }
 }
 
@@ -210,7 +230,7 @@ ul{
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     overflow: hidden;
-    margin: 20px;
+    margin: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 330px;
     height: 450px;
@@ -367,6 +387,7 @@ section#contato button:hover {
 
 
 footer {
+    width: 100vw;
     text-align: center;
     padding: 20px 0;
     background-color: #f0544f;
@@ -386,34 +407,47 @@ footer p {
     position: relative;
     margin: auto;
     overflow: hidden;
-}
+    width: 95%;
+    max-width: 1400px;
+  }
 
-.carousel-track-container {
+  .carousel-track-container {
     width: 100%;
-}
+    overflow: hidden;
+  }
 
-.carousel-track {
+  .carousel-track {
     list-style: none;
     padding: 0;
     display: flex;
     transition: transform 0.5s ease; /* Adiciona a transição suave */
-}
+  }
 
-.carousel-slide {
-    min-width: 300px; /* Largura de cada slide do carrossel */
-    margin-right: 50px; /* Espaçamento entre os slides */
-}
+  .carousel-slide {
+    min-width: 340px; /* Largura de cada slide do carrossel */
+    margin-right: 35px; /* Espaçamento entre os slides */
+    border-radius: 10px;
+    overflow: hidden;
+  }
 
-/* Estilização dos botões Anterior e Próximo */
-.carousel-button {
+  .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: #fff;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 50%;
     cursor: pointer;
-}
+    z-index: 100;
+  }
+
+  .carousel-button.left {
+    left: 10px;
+  }
+
+  .carousel-button.right {
+    right: 10px;
+  }
 
 .prev {
     left: 10px;
