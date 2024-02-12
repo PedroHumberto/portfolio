@@ -10,49 +10,97 @@
 
 <body>
     <nav>
+        <div class="menu-toggle"><i class="ti-menu"></i></div> <!-- Ícone do Font Awesome para o menu -->
         <ul>
-            <li><a href="#sobre-mim">Sobre Mim</a></li>
-            <li><a href="#certificados">Certificados</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contato">Me Contrate</a></li>
+            <li><a href="#about" class="nav-link">Sobre Mim</a></li>
+            <li><a href="#soluctions" class="nav-link">Soluções</a></li>
+            <li><a href="#certificates" class="nav-link">Certificados</a></li>
+            <li><a href="#projetos" class="nav-link">Projetos</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#contato" class="nav-link">Me Contrate</a></li>
         </ul>
     </nav>
+    <div class="overlay"></div>
 
+    <section id="about" class="about">
+        <div class="my-data">
+            <h1>PEDRO </h1>
+            <h2>Humberto Gonçalves Cardoso</h2>
+            <p>Desenvolvedor de Software | .Net Dev | Front-End | Back-End</p>
 
-    <!-- Seções existentes: Sobre Mim e Certificados -->
-    <div class="container">
-        <section id="sobre-mim" class="data-container">
-            <div class="my-data">
-                <img src="./assets/perfil.jpg" alt="Minha Foto" class="profile-pic" style="width: 25%;">
-                <h1>Pedro Humberto Gonçalves Cardoso</h1>
-                <p>Desenvolvedor de Software | .Net Dev | Front-End | Back-End</p>
+        </div>
+        <div class="right-side">
+            <div class="service">
+                <p class="up-info">
+                    PROFISSIONAL FULLSTACK ESPECIALISTA EM ARQUITETURA BACK-END
+                </p>
+                <h1>Crie suas landing pages ou crie um projeto completo.</h1>
+                <p>Landing Pages ou sistemas maiores, foque no seu objetivo e deixe a parte da Web sob minha
+                    responsablidade, com projetos completos ou simples, estou disposto a resolver seu problema</p>
             </div>
-            <div class="my-info">
-                <h3>Contatos:</h3>
-                <div class="socials">
-                    <a class="social-item" href="https://www.linkedin.com/in/pedro-cardoso-864542200/"
-                        target="_blank"><i class="ti-linkedin"></i></a>
-                    <a class="social-item" href=""><i class="ti-github"></i></a>
-                </div>
-
-                <a href="/assets/img/balta-io.png" download="my_file.png"><button class="custom-button">Download CV</button></a>
+            <div class="socials">
+                <a class="social-item" href="https://www.linkedin.com/in/pedro-cardoso-864542200/" target="_blank"><i
+                        class="ti-linkedin"></i></a>
+                <a class="social-item" href=""><i class="ti-github"></i></a>
             </div>
-        </section>
+            <div class="contact">
+                <h2>Vamos Conversar?</h2>
+                <a href="/assets/img/balta-io.png" download="my_file.png"><button class="custom-button">Entre em
+                        contato</button></a>
 
-
-        <section id="certificados">
-            <h1>Certificados</h1>
-            <div class="carousel" id="drag-carousel">
-              <button class="carousel-button left" onclick="moveSlide(-1)">&#10094;</button>
-              <button class="carousel-button right" onclick="moveSlide(1)">&#10095;</button>
-              <div class="carousel-track-container">
+            </div>
+            <div class="cv-button">
+                <a href="/assets/img/balta-io.png" download="my_file.png"><button class="custom-button">Download
+                        CV</button></a>
+            </div>
+    </section>
+    <section id="soluctions" class="knowledge">
+        <h1>Confira as soluções que ofereço</h1>
+        <div class="knowledge-container">
+            <article class="knowledge-card">
+                <i class="icon ti-desktop"></i>
+                <h1><b>Desenvolvimento Web</b></h1>
+                <p>
+                    Desenvolvimento Web
+                    Desenvolvimento de
+                    Landing Page, Site Institucional,
+                    Blog e E-commerce.
+                </p>
+            </article>
+            <article class="knowledge-card">
+                <i class="ti-briefcase"></i>
+                <h1>Desenvolvimento de API's</h1>
+                <p>
+                    Criação e integração de APIs personalizadas para
+                    sistemas, permitindo a comunicação eficiente entre
+                    diferentes plataformas e serviços. Inclui APIs RESTful,
+                    GraphQL, autenticação, e documentação detalhada.
+                </p>
+            </article>
+            <article class="knowledge-card">
+                <i class="ti-bar-chart"></i>
+                <h1>Planejamento de Projetos</h1>
+                <p>
+                    Serviço especializado em Planejamento de Projetos,
+                    englobando a definição de escopo, cronogramas,
+                    recursos e gestão de riscos para garantir
+                    a entrega bem-sucedida de iniciativas de qualquer porte.
+                </p>
+            </article>
+        </div>
+    </section>
+    <section id="certificates" class="certificates">
+        <h1>Certificados</h1>
+        <div class="carousel" id="drag-carousel">
+            <button class="carousel-button left ti-arrow-left" onclick="moveSlide(-1)"></button>
+            <button class="carousel-button right ti-arrow-right" onclick="moveSlide(1)"></button>
+            <div class="carousel-track-container">
                 <ul class="carousel-track">
                     <li class="carousel-slide">
                         <div class="card">
                             <a href="https://cursos.alura.com.br/certificate/b87e2e1b-07f2-4ff2-80d2-9287d5ca86d3?lang=pt_BR"
                                 target="_blank">
-                                <img src="./assets/img/logo_alura.jpg" alt="curso">
+                                <img src="./assets/img/alura.png" alt="curso">
                                 <h2>EF Core: Relacionando Entidades</h2>
                                 <p>Este curso fornece um mergulho profundo nos estudos de relacionamentos entre
                                     entidades no
@@ -68,14 +116,19 @@
                     </li>
                     <li class="carousel-slide">
                         <div class="card">
-                            <img src="./assets/img/balta-logo.jpg" alt="curso">
-                            <a href="https://balta.io/certificados/ce239517-ed14-4486-b484-a583f8f40cdc" target="_blank">
+                            <img src="./assets/img/balta-io.png" alt="curso">
+                            <a href="https://balta.io/certificados/ce239517-ed14-4486-b484-a583f8f40cdc"
+                                target="_blank">
                                 <h2>Fundamentos do Event-Driven</h2>
                                 <p>
-                                    O curso abordou Event-Driven Architecture (Arquitetura Orientada a Eventos), incluindo demonstrações de mapeamento, 
-                                    conceitos-chave como eventos, políticas de execução, integração com sistemas externos, 
-                                    e fundamentos teóricos de mensagens, eventos e comandos. Recomendou-se também explorar 
-                                    CQRS para uma compreensão mais aprofundada. O professor Andre Baltieri apresentou um projeto prático durante o curso.
+                                    O curso abordou Event-Driven Architecture (Arquitetura Orientada a Eventos),
+                                    incluindo demonstrações de mapeamento,
+                                    conceitos-chave como eventos, políticas de execução, integração com sistemas
+                                    externos,
+                                    e fundamentos teóricos de mensagens, eventos e comandos. Recomendou-se também
+                                    explorar
+                                    CQRS para uma compreensão mais aprofundada. O professor Andre Baltieri apresentou um
+                                    projeto prático durante o curso.
                                 </p>
                             </a>
                         </div>
@@ -84,7 +137,7 @@
                         <div class="card">
                             <a href="https://balta.io/certificados/79b3cc97-ab1e-41e8-9a25-3718ca290dd8"
                                 target="_blank">
-                                <img src="./assets/img/balta-logo.jpg" alt="curso">
+                                <img src="./assets/img/balta-io.png" alt="curso">
                                 <h2>Segurança em APIs ASP.NET</h2>
                                 <p>Este curso oferece um estudo aprofundado sobre a implementação de segurança em
                                     APIs ASP.NET
@@ -101,7 +154,7 @@
                     <li class="carousel-slide">
                         <div class="card">
                             <a href="https://balta.io/certificados/64db2269-365e-4d14-8b64-4f61142357b0">
-                                <img src="./assets/img/balta-logo.jpg" alt="curso">
+                                <img src="./assets/img/balta-io.png" alt="curso">
                                 <h2>Fundamentos do SQL Server</h2>
                                 <p>Este curso aborda de forma prática e interativa os conceitos essenciais do SQL,
                                     utilizando o
@@ -120,13 +173,16 @@
                         <div class="card">
                             <a href="https://cursos.alura.com.br/user/pedrohumbertogc/course/react-modernizando-escrever-typescript/certificate"
                                 target="_blank">
-                                <img src="./assets/img/logo_alura.jpg" alt="curso">
+                                <img src="./assets/img/alura.png" alt="curso">
                                 <h2>React + TypeScript</h2>
-                                <p>Nesta aula, exploramos os conceitos fundamentais do React, incluindo componentização, props e
+                                <p>Nesta aula, exploramos os conceitos fundamentais do React, incluindo componentização,
+                                    props e
                                     state, com a integração poderosa
-                                    do TypeScript. O curso se aprofunda em um projeto prático, onde os conceitos de hooks, como
+                                    do TypeScript. O curso se aprofunda em um projeto prático, onde os conceitos de
+                                    hooks, como
                                     useState e useEffect,
-                                    são detalhadamente abordados. Além disso, enfatizamos a aplicação de boas práticas no
+                                    são detalhadamente abordados. Além disso, enfatizamos a aplicação de boas práticas
+                                    no
                                     desenvolvimento, garantindo
                                     uma base sólida para a construção de aplicações React eficientes e escaláveis.
                                 </p>
@@ -134,162 +190,130 @@
                         </div>
                     </li>
                 </ul>
-              </div>
             </div>
-        </section>
-        
+        </div>
+    </section>
 
-        <section id="projetos">
-            <h1>Meus Projetos</h1>
-            <div class="card-project-container">
-                <!-- Cartões de projeto. Repetir para 4x4 conforme necessário -->
-                <div class="card-project">
-                    <img src="./assets/img/telanaruto.jpeg" alt="Chat Naruto Next.JS">
-                    <div class="card-text">
-                        <a href="https://naruto-chat-react.vercel.app/" target="_blank">
-                            <h3>Chat Naruto Next.JS</h3>
-                            <p>Um chat simples, usando Next.js para fins de estudo, banco de dados escolhidos NOSQL Supabase. 
-                                Você deve entrar com seu nick do github. <br>Tecnologias Usadas: Next.Js, JavaScript e Supabase como banco de dados.</p>
-                        </a>
-                        
-                    </div>
-                </div>
-                <div class="card-project">
-                    <img src="./assets/img/redesocialApi.png" alt="Rede Social de Jogos">
-                    <div class="card-text">
-                        <a href="https://github.com/adsProjetoDeBloco/pb_redesocial" target="_blank">
-                            <h3>Rede Social de Jogos</h3>
-                            <p>IndentityAPI e API feita pensanda na logica para uma rede social de jogos, 
-                                onde você pode cadastrar seus jogos favoritos e criar salas para eventos destes jogos.
-                                Aqui você ira acessar a Documentação contendo seus endpoints e results. 
-                                <br>Tecnologias Usadas: Azure SQL, Azure SaaS, Azure Blob Storage, .Net e C#.
-                            </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="card-project">
-                    <img src="./assets/img/gk-fashion.png" alt="Projeto GK Fashion">
-                    <div class="card-text">
-                        <a href="https://gkfashion-htmlcss.vercel.app/" target="_blank">
-                            <h3>Projeto GK Fashion</h3>
-                            <p>Site feito em HTML e CSS puro para fins de estudo, trabalho realizado para entregar na faculdade. O site foi feto de forma responsiva,
-                                podendo ser acessado de um smartphone.
 
-                            </p>
-                        </a>
+    <section id="portfolio" class="portfolio-cotainer">
+        <h1 class="subtitle">Portfolio</h1>
+        <p>Seja para desenvolver Landing Pages elegantes e responsivas ou para construir APIs robustas e seguras,
+            estou equipado para atender todas as suas necessidades de desenvolvimento web.
+            Especializo-me em criar APIs eficientes para gerenciamento de autenticação e controle de acesso, otimização
+            e modernização de projetos
+            existentes, além de iniciar novos empreendimentos digitais do zero. Meu foco está em entregar soluções
+            personalizadas que impulsionam
+            o desempenho e a funcionalidade do seu negócio, garantindo uma experiência de usuário excepcional e suporte
+            contínuo para o crescimento
+            da sua plataforma online.</p>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="img-wrapper">
+                    <img src="assets/img/gk-fashion.png" alt="">
+                    <div class="overlay">
+                        <div class="overlay-infos">
+                            <h5>GK Fashion</h5>
+                            <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="card-project">
-                    <img src="./assets//img/todo-api.png" alt="API ToDo">
-                    <div class="card-text">
-                        <a href="https://github.com/PedroHumberto/todoApi_CleanArch" target="_blank">
-                            
-                            <h3>ToDo API - Clean Architecture</h3>
-                            <p>Projeto feito aplicando conceitos de Clean Archteture atraves de leitura do livro 
-                                Clean Architecture: A Craftsman's Guide to Software Structure and Design.<br>
-                                O projeto é uma API de gerenciar atividades, uma ToDo API. Foi Escolhido o CQRS Pattern para a aplicação.
-                            </p>
-
-                        </a>
-                    </div>
-                </div>
-                <!-- Adicionar mais cartões aqui -->
-            </div>
-        </section>
-
-        <section id="skills">
-            <h1>Skills</h1>
-
-            <p id="descricao-skills">
-                
-                <br>
-                Em processo de transição de carreira, atualmente, estou focado em aprimorar minhas habilidades em programação, 
-                com ênfase especial em C#, .NET e React. Estou matriculado no curso de Análise e Desenvolvimento de Sistemas, 
-                com previsão de conclusão no primeiro semestre de 2024.<br> 
-                Profissional com experiência consolidada no mercado autônomo,
-                especializado em rotinas de escritório de contabilidade e amplo conhecimento em sistemas contábeis, 
-                especialmente no Domínio Sistemas. 
-                <br>
-                Sou conhecido pela minha proatividade, dedicação, concentração e espírito empreendedor,
-                mantendo-me sempre atualizado através de livros, vídeos e cursos.
-                <br>
-                Dedico-me a estudos constantes em áreas como:
-            <ul>
-                <li>C#</li>
-                <li>TypeScript#</li>
-                <li>React</li>
-                <li>TDD (Test-Driven Development)</li>
-                <li>DDD (Domain-Driven Design)</li>
-                <li>Clean Architecture</li>
-                <li>SOLID</li>
-            </ul>
-            </p>
-            <p id="descricao-skills">
-                <b>Demais Linguagens que já programei:</b>
-                JavaScript,
-                Python,
-                Kotlin
-                <br>
-                <b>Frameworks:</b>
-                React
-                .NET Framework
-                <br>
-                <b>Inglês:</b>
-                Avançãdo (Estudando)
-            </p>
-
-            <div class="skill-container">
-                <div class="skill">
-                    <h2>C#</h2>
-                    <div class="skill-bar">
-                        <div class="skill-fill" style="width: 80%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <h2>TypeScript</h2>
-                    <div class="skill-bar">
-                        <div class="skill-fill" style="width: 72%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <h2>SQL</h2>
-                    <div class="skill-bar">
-                        <div class="skill-fill" style="width: 77%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <h2>React</h2>
-                    <div class="skill-bar">
-                        <div class="skill-fill" style="width: 75%;"></div>
-                    </div>
-                </div>
-
-                <div class="skill">
-                    <h2>Inglês</h2>
-                    <div class="skill-bar">
-                        <div class="skill-fill" style="width: 85%;"></div>
+                <div class="img-wrapper">
+                    <img src="assets/img/telanaruto.jpeg" alt="">
+                    <div class="overlay">
+                        <div class="overlay-infos">
+                            <h5>Chat Naruto</h5>
+                            <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="contato">
-            <h1>Me Contrate</h1>
-            <form>
-                <input type="text" name="nome" placeholder="Seu Nome">
-                <input type="email" name="email" placeholder="Seu E-mail">
-                <input type="tel" name="telefone" placeholder="Seu Telefone">
-                <textarea name="descricao" placeholder="Descreva seu projeto..."></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </div>
-
-    <footer>
-        <p>© 2024 Pedro Humberto Gonçalves Cardoso. Todos os direitos reservados.</p>
-    </footer>
+            <div class="col-sm-4">
+                <div class="img-wrapper">
+                    <img src="assets/img/todo-api.png" alt="">
+                    <div class="overlay">
+                        <div class="overlay-infos">
+                            <h5>Todo-Api</h5>
+                            <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <img src="assets/img/redesocialApi.png" alt="">
+                    <div class="overlay">
+                        <div class="overlay-infos">
+                            <h5>Social Midia API</h5>
+                            <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="img-wrapper">
+                    <img src="assets/imgs/folio-5.jpg" alt="">
+                    <div class="overlay">
+                        <div class="overlay-infos">
+                            <h5>Project Title</h5>
+                            <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                            <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <img src="assets/imgs/folio-6.jpg" alt="">
+                    <div class="overlay">
+                        <div class="overlay-infos">
+                            <h5>Project Title</h5>
+                            <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                            <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script>
+        //MENU BUTTON
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.querySelector('.menu-toggle');
+            const menu = document.querySelector('nav ul');
+            const overlay = document.querySelector('.overlay');
+            const links = document.querySelectorAll('.nav-link');
+
+            function toggleMenuIcon() {
+                if (window.innerWidth <= 1001) {
+                    toggleButton.style.display = menu.classList.contains('active') ? 'none' : 'block';
+                } else {
+                    toggleButton.style.display = 'none'; // Garante que o ícone fique oculto em telas maiores
+                }
+            }
+
+            toggleButton.addEventListener('click', function () {
+                menu.classList.toggle('active');
+                overlay.style.display = menu.classList.contains('active') ? 'block' : 'none';
+                toggleMenuIcon();
+            });
+
+            const closeMenu = () => {
+                menu.classList.remove('active');
+                overlay.style.display = 'none';
+                setTimeout(() => {
+                    toggleMenuIcon(); // Chama a função para verificar se deve mostrar o ícone
+                }, 500); // Atraso para a reexibição do ícone
+            };
+
+            overlay.addEventListener('click', closeMenu);
+
+            links.forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+
+            // Adiciona um ouvinte para mudanças de tamanho da janela para ajustar a visibilidade do ícone conforme necessário
+            window.addEventListener('resize', toggleMenuIcon);
+        });
+
+
+
         // JavaScript para alterar a cor do item da navbar ao clicar
         document.querySelectorAll('nav ul li a').forEach(link => {
             link.addEventListener('click', function () {
@@ -305,15 +329,17 @@
             nav.classList.toggle('scrolled', window.scrollY > 0);
         });
 
+
+
         let currentSlide = 0;
         const slides = document.querySelectorAll('.carousel-slide');
         const totalSlides = slides.length;
 
         function moveSlide(direction) {
             if (direction === 1 && currentSlide < totalSlides - 1) {
-            currentSlide++;
+                currentSlide++;
             } else if (direction === -1 && currentSlide > 0) {
-            currentSlide--;
+                currentSlide--;
             }
             updateCarousel();
         }
@@ -327,5 +353,7 @@
 
     </script>
 </body>
+
+
 
 </html>
