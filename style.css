@@ -558,4 +558,7 @@ nav ul li a {
     nav ul.active {
         max-height: 500px; /* Defina um valor máximo de altura suficiente para cobrir o conteúdo do menu */
     }
+    .row {
+        flex-direction: column;
+    }
 }
