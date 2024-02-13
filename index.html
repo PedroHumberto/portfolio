@@ -15,12 +15,10 @@
             <li><a href="#about" class="nav-link">Sobre Mim</a></li>
             <li><a href="#soluctions" class="nav-link">Soluções</a></li>
             <li><a href="#certificates" class="nav-link">Certificados</a></li>
-            <li><a href="#projetos" class="nav-link">Projetos</a></li>
+            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
             <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#contato" class="nav-link">Me Contrate</a></li>
         </ul>
     </nav>
-    <div class="overlay"></div>
 
     <section id="about" class="about">
         <div class="my-data">
@@ -45,17 +43,17 @@
             </div>
             <div class="contact">
                 <h2>Vamos Conversar?</h2>
-                <a href="/assets/img/balta-io.png" download="my_file.png"><button class="custom-button">Entre em
+                <a href="https://wa.me/+5531984484410"><button class="custom-button">Entre em
                         contato</button></a>
 
             </div>
             <div class="cv-button">
-                <a href="/assets/img/balta-io.png" download="my_file.png"><button class="custom-button">Download
+                <a href="/assets/Pedro_Humberto_Gonçalves_Cardoso__Curriculo Atual.pdf" download="Pedro_Humberto_Gonçalves_Cardoso__Curriculo Atual.pdf"><button class="custom-button">Download
                         CV</button></a>
             </div>
     </section>
     <section id="soluctions" class="knowledge">
-        <h1>Confira as soluções que ofereço</h1>
+        <h1>SOLUÇÕES</h1>
         <div class="knowledge-container">
             <article class="knowledge-card">
                 <i class="icon ti-desktop"></i>
@@ -90,7 +88,7 @@
         </div>
     </section>
     <section id="certificates" class="certificates">
-        <h1>Certificados</h1>
+        <h1>CERTIFICADO</h1>
         <div class="carousel" id="drag-carousel">
             <button class="carousel-button left ti-arrow-left" onclick="moveSlide(-1)"></button>
             <button class="carousel-button right ti-arrow-right" onclick="moveSlide(1)"></button>
@@ -193,10 +191,8 @@
             </div>
         </div>
     </section>
-
-
     <section id="portfolio" class="portfolio-cotainer">
-        <h1 class="subtitle">Portfolio</h1>
+        <h1 class="subtitle">PORTFOLIO</h1>
         <p>Seja para desenvolver Landing Pages elegantes e responsivas ou para construir APIs robustas e seguras,
             estou equipado para atender todas as suas necessidades de desenvolvimento web.
             Especializo-me em criar APIs eficientes para gerenciamento de autenticação e controle de acesso, otimização
@@ -272,12 +268,90 @@
         </div>
     </section>
 
+    <section id="skills">
+        <h1>SKILLS</h1>
+
+        <p id="descricao-skills">
+            
+            <br>
+            Em processo de transição de carreira, atualmente, estou focado em aprimorar minhas habilidades em programação, 
+            com ênfase especial em C#, .NET e React. Estou matriculado no curso de Análise e Desenvolvimento de Sistemas, 
+            com previsão de conclusão no primeiro semestre de 2024.<br> 
+            Profissional com experiência consolidada no mercado autônomo,
+            especializado em rotinas de escritório de contabilidade e amplo conhecimento em sistemas contábeis, 
+            especialmente no Domínio Sistemas. 
+            <br>
+            Sou conhecido pela minha proatividade, dedicação, concentração e espírito empreendedor,
+            mantendo-me sempre atualizado através de livros, vídeos e cursos.
+            <br>
+            Dedico-me a estudos constantes em áreas como:
+        <ul>
+            <li>C#</li>
+            <li>TypeScript#</li>
+            <li>React</li>
+            <li>TDD (Test-Driven Development)</li>
+            <li>DDD (Domain-Driven Design)</li>
+            <li>Clean Architecture</li>
+            <li>SOLID</li>
+        </ul>
+        </p>
+        <p id="descricao-skills">
+            <b>Demais Linguagens que já programei:</b>
+            JavaScript,
+            Python,
+            Kotlin
+            <br>
+            <b>Frameworks:</b>
+            React
+            .NET Framework
+            <br>
+            <b>Inglês:</b>
+            Avançãdo (Estudando)
+        </p>
+
+        <div class="skill-container">
+            <div class="skill">
+                <h2>C#</h2>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h2>TypeScript</h2>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 72%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h2>SQL</h2>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 77%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h2>React</h2>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 75%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h2>Inglês</h2>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 85%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 Pedro Humberto Gonçalves Cardoso. Todos os direitos reservados.</p>
+    </footer>
+
     <script>
         //MENU BUTTON
         document.addEventListener('DOMContentLoaded', function () {
             const toggleButton = document.querySelector('.menu-toggle');
             const menu = document.querySelector('nav ul');
-            const overlay = document.querySelector('.overlay');
             const links = document.querySelectorAll('.nav-link');
 
             function toggleMenuIcon() {
@@ -290,19 +364,16 @@
 
             toggleButton.addEventListener('click', function () {
                 menu.classList.toggle('active');
-                overlay.style.display = menu.classList.contains('active') ? 'block' : 'none';
                 toggleMenuIcon();
             });
 
             const closeMenu = () => {
                 menu.classList.remove('active');
-                overlay.style.display = 'none';
                 setTimeout(() => {
                     toggleMenuIcon(); // Chama a função para verificar se deve mostrar o ícone
                 }, 500); // Atraso para a reexibição do ícone
             };
 
-            overlay.addEventListener('click', closeMenu);
 
             links.forEach(link => {
                 link.addEventListener('click', closeMenu);
