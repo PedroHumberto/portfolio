@@ -87,14 +87,10 @@
             </article>
         </div>
     </section>
-    <section id="certificates" class="certificates">
+    <section id="certificates" class="certificates secao secao-vertical">
         <h1>CERTIFICADO</h1>
-        <div class="carousel" id="drag-carousel">
-            <button class="carousel-button left ti-arrow-left" onclick="moveSlide(-1)"></button>
-            <button class="carousel-button right ti-arrow-right" onclick="moveSlide(1)"></button>
-            <div class="carousel-track-container">
-                <ul class="carousel-track">
-                    <li class="carousel-slide">
+                <ul class="secao__cartoes">
+                    <li class="">
                         <div class="card">
                             <a href="https://cursos.alura.com.br/certificate/b87e2e1b-07f2-4ff2-80d2-9287d5ca86d3?lang=pt_BR"
                                 target="_blank">
@@ -112,7 +108,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="carousel-slide">
+                    <li class="">
                         <div class="card">
                             <img src="./assets/img/balta-io.png" alt="curso">
                             <a href="https://balta.io/certificados/ce239517-ed14-4486-b484-a583f8f40cdc"
@@ -131,7 +127,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="carousel-slide">
+                    <li class="">
                         <div class="card">
                             <a href="https://balta.io/certificados/79b3cc97-ab1e-41e8-9a25-3718ca290dd8"
                                 target="_blank">
@@ -149,7 +145,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="carousel-slide">
+                    <li class="">
                         <div class="card">
                             <a href="https://balta.io/certificados/64db2269-365e-4d14-8b64-4f61142357b0">
                                 <img src="./assets/img/balta-io.png" alt="curso">
@@ -167,7 +163,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="carousel-slide">
+                    <li class="">
                         <div class="card">
                             <a href="https://cursos.alura.com.br/user/pedrohumbertogc/course/react-modernizando-escrever-typescript/certificate"
                                 target="_blank">
@@ -399,28 +395,6 @@
             var nav = document.querySelector('nav');
             nav.classList.toggle('scrolled', window.scrollY > 0);
         });
-
-
-
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const totalSlides = slides.length;
-
-        function moveSlide(direction) {
-            if (direction === 1 && currentSlide < totalSlides - 1) {
-                currentSlide++;
-            } else if (direction === -1 && currentSlide > 0) {
-                currentSlide--;
-            }
-            updateCarousel();
-        }
-
-        function updateCarousel() {
-            const track = document.querySelector('.carousel-track');
-            const slideWidth = slides[0].getBoundingClientRect().width;
-            const newTransform = currentSlide * slideWidth;
-            track.style.transform = `translateX(-${newTransform}px)`;
-        }
 
     </script>
 </body>
